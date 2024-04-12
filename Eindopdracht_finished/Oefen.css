@@ -1,0 +1,82 @@
+body{
+    background-image: url(Plank.png);
+}
+
+.dice {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dice:hover{
+    border:solid 3px;
+    border-color: orange;
+}
+
+.table-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#speler1{
+    font-size: larger;
+    font-weight: bold;
+}
+
+#speler2{
+    font-size: larger;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type:none;
+    width:350px;
+}
+
+li {
+    border: solid black;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1{
+    align-content: center;
+    margin-left: 460px;
+    font-weight:bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2{
+    align-content: center;
+    margin-left: 150px;
+}
+
+.Reset{
+    align-content: center;
+    margin-left: 470px;
+}
+
+.rollButton{
+    align-content: center;
+    margin-left: 380px;
+}
+
+.switch{
+    margin-left: 50px;
+}
+
+.number{
+    margin-left:50px;
+}
+
+button{
+    border-radius:5px;
+    background-color:lightskyblue;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: blue;
+}

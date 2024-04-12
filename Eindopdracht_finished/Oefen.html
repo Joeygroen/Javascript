@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Oefen.css">
+    <link rel="icon" type="image" href="dice.png">
+    <script src="Oefen.js"></script>
+    <title>Yahtzee</title>
+</head>
+<body>
+    <div class = "content"></div>
+        <div class="table-container">
+            <div class="table" id="table1">
+                <h2>Speler 1</h2>
+                    <ul>
+                        <li id="speler1">
+                            <input type="text" id="naam1">
+                            <span><button id="submit" onclick="submitBtn()">Submit</button></span>
+                        </li>
+                        <li>
+                            <span>1</span>
+                            <span id="scoreOnes">0</span>
+                            <span><button id="choose1" onclick="choosePoint1()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>2</span>
+                            <span id="scoreTwos">0</span>
+                            <span><button id="choose2" onclick="choosePoint2()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>3</span>
+                            <span id="scoreThrees">0</span>
+                            <span><button id="choose3" onclick="choosePoint3()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>4</span>
+                            <span id="scoreFours">0</span>
+                            <span><button id="choose4" onclick="choosePoint4()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>5</span>
+                            <span id="scoreFives">0</span>
+                            <span><button id="choose5" onclick="choosePoint5()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>6</span>
+                            <span id="scoreSixes">0</span>
+                            <span><button id="choose6" onclick="choosePoint6()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Totaal boven</span>
+                            <span id="totaal1">0</span>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span >Bonus</span>
+                            <span id="Bonus">0</span>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span>Three of a kind</span>
+                            <span id="3ofaKind">0</span>
+                            <span><button id="choose3Kind" onclick="choose3Kind()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Four of a kind</span>
+                            <span id="4ofaKind">0</span>
+                            <span><button id="choose4Kind" onclick="choose4Kind()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Full house</span>
+                            <span id="fullHouse">0</span>
+                            <span><button id="chooseFullHouse" onclick="chooseFullHouse()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Kleine straat</span>
+                            <span id="klein">0</span>
+                            <span><button id="chooseKlein" onclick="chooseKlein()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Grote straat</span>
+                            <span id="groot">0</span>
+                            <span><button id="chooseGroot" onclick="chooseGroot()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Yahtzee</span>
+                            <span id="yahtzee">0</span>
+                            <span><button id="chooseYahtzee" onclick="chooseYahtzee()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Chance</span>
+                            <span id="chance">0</span>
+                            <span><button id="chooseChance"onclick="chooseChance()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Totaal onder</span>
+                            <span id="lowertotaal">0</span>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span>Totaal alles</span>
+                            <span id="endtotaal">0</span>
+                            <span></span>
+                        </li>
+                    </ul>
+            </div> 
+            <div id="diceContainer">
+                <h1>Yahtzee</h1>
+                <button class="rollButton" id="rollcount" onclick="rollDice()">Roll Dice</button>
+                <span class="number" id="numberDisplay">0</span>
+                <button class="switch" id="nextplayer" onclick="switchPlayer()">volgende speler</button>
+                <br><br>
+                <img class="dice" id="dice1" src="Dice-4.png" alt="Dice 1" onclick="toggleHold(1)">
+                <img class="dice" id="dice2" src="Dice-1.png" alt="Dice 2" onclick="toggleHold(2)">
+                <img class="dice" id="dice3" src="Dice-3.png"" alt="Dice 3" onclick="toggleHold(3)">
+                <img class="dice" id="dice4" src="Dice-1.png"" alt="Dice 4" onclick="toggleHold(4)">
+                <img class="dice" id="dice5" src="Dice-6.png"" alt="Dice 5" onclick="toggleHold(5)">
+                <br><br>
+                <button class="Reset" onclick="window.location.reload();">Reset Game</button>
+            </div>
+            <div class="table" id="table2">
+                <h2>Speler 2</h2>
+                    <ul>
+                        <li id="speler2">
+                        <input type="text" id="naam2">
+                        <span><button id="submit2" onclick="submitBtn2()">Submit</button></span>
+                        </li>
+                        <li>
+                            <span>1</span>
+                            <span id="scoreOnes2">0</span>
+                            <span><button id="choose1-2" onclick="choosePoint1_2()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>2</span>
+                            <span id="scoreTwos2">0</span>
+                            <span><button id="choose2-2" onclick="choosePoint2_2()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>3</span>
+                            <span id="scoreThrees2">0</span>
+                            <span><button id="choose3-2" onclick="choosePoint3_2()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>4</span>
+                            <span id="scoreFours2">0</span>
+                            <span><button id="choose4-2" onclick="choosePoint4_2()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>5</span>
+                            <span id="scoreFives2">0</span>
+                            <span><button id="choose5-2" onclick="choosePoint5_2()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>6</span>
+                            <span id="scoreSixes2">0</span>
+                            <span><button id="choose6-2" onclick="choosePoint6_2()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Totaal boven</span>
+                            <span id="totaal2">0</span>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span>Bonus</span>
+                            <span id="Bonus2">0</span>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span>Three of a kind</span>
+                            <span id="3ofaKind2">0</span>
+                            <span><button id="choose3Kind2" onclick="choose3Kind2()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Four of a kind</span>
+                            <span id="4ofaKind2">0</span>
+                            <span><button id="choose4Kind2" onclick="choose4Kind2()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Full house</span>
+                            <span id="fullHouse2">0</span>
+                            <span><button id="chooseFullHouse2" onclick="chooseFullHouse2()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Kleine straat</span>
+                            <span id="klein2">0</span>
+                            <span><button id="chooseKlein2" onclick="chooseKlein2()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Grote straat</span>
+                            <span id="groot2">0</span>
+                            <span><button id="chooseGroot2" onclick="chooseGroot2()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Yahtzee</span>
+                            <span id="yahtzee2">0</span>
+                            <span><button id="chooseYahtzee2" onclick="chooseYahtzee2()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Chance</span>
+                            <span id="chance2">0</span>
+                            <span><button id="chooseChance2" onclick="chooseChance2()">Kies</button></span>
+                        </li>
+                        <li>
+                            <span>Totaal onder</span>
+                            <span id="lowertotaal2">0</span>
+                            <span></span>
+                        </li>
+                        <li>
+                            <span>Totaal alles</span>
+                            <span id="endtotaal2">0</span>
+                            <span></span>
+                        </li>
+                    </ul>
+            </div> 
+        </div>
+    </div>
+</body>
+</html>
